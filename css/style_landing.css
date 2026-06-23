@@ -1,0 +1,697 @@
+/* ======================================================= */
+/* ۱. تعریف فونت و پایه‌های اولیه (Typography & Reset) */
+/* ======================================================= */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+    color: #1E1F4B;
+    direction: rtl;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ======================================================= */
+/* ۲. استایل‌های هدر سایت (Header) */
+/* ======================================================= */
+.main-header {
+    width: 100%;
+    padding: 24px 8%;
+    background-color: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 45px;
+    display: block;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #4A4A4A;
+    margin: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #4A4A4A;
+    font-size: 14px;
+    gap: 6px;
+}
+
+.btn-login img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ======================================================= */
+/* ۳. بخش اول: قهرمان (Hero Section) */
+/* ======================================================= */
+.hero-section {
+    padding: 40px 8%;
+    min-height: calc(100vh - 95px);
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 540px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    color: #1E1F4B;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #7E7E7E;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #5D38DB;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #5D38DB;
+    color: #5D38DB;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.hero-images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-banner-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ======================================================= */
+/* ۴. بخش دوم: هدیه پلاس چطوری کار میکنه */
+/* ======================================================= */
+.how-it-works {
+    padding: 80px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title-wrapper h2 {
+    font-size: 28px;
+    color: #1E1F4B;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.section-title-wrapper p {
+    font-size: 15px;
+    color: #7E7E7E;
+    margin-bottom: 48px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.step-card {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #EEF0F8;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start; 
+    text-align: right;
+    box-shadow: 0 10px 35px rgba(165, 175, 220, 0.06);
+}
+
+.step-icon-wrapper {
+    width: 54px;
+    height: 54px;
+    background: #ffffff;
+    border: 1px solid #EEF0F8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 16px; 
+    box-shadow: 0 4px 12px rgba(165, 175, 220, 0.03);
+}
+
+.step-icon-wrapper img {
+    width: 24px;
+    height: 24px;
+}
+
+.step-text {
+    flex: 1;
+}
+
+.step-text h3 {
+    font-size: 18px;
+    color: #1E1F4B;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.step-text p {
+    font-size: 13px;
+    color: #7E7E7E;
+    line-height: 1.7;
+}
+
+/* ======================================================= */
+/* ۵. بخش سوم: طرح‌های اختصاصی ما */
+/* ======================================================= */
+.special-designs {
+    padding: 40px 8% 80px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    width: 100%;
+    gap: 20px;
+}
+
+.products-title-line {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 16px;
+}
+
+.title-decor-icon {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    order: 1;
+}
+
+.products-title-line h2 {
+    font-size: 24px;
+    color: #1E1F4B;
+    font-weight: 800;
+    white-space: nowrap;
+    order: 3;
+}
+
+.products-title-line::before {
+    content: "";
+    height: 1px;
+    width: 45px;
+    background: #EEF0F6;
+    flex-shrink: 0;
+    order: 2;
+}
+
+.products-title-line::after {
+    content: "";
+    height: 1px;
+    background: #EEF0F6;
+    flex-grow: 1;
+    order: 4;
+}
+
+.view-more-link {
+    color: #5D38DB;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.products-grid {
+    display: flex;
+    gap: 32px;
+}
+
+.product-item {
+    flex: 1;
+    background: transparent; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;   
+}
+
+.product-img-wrapper {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.product-img-wrapper img {
+    width: 100%;
+    display: block;
+    border-radius: 24px; 
+    box-shadow: 0 15px 35px rgba(165, 175, 220, 0.1);
+}
+
+.product-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; 
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1E1F4B;
+}
+
+.product-price {
+    font-size: 14px;
+    color: #4A4A4A;
+    font-weight: 500;
+}
+
+.product-desc {
+    font-size: 13px;
+    color: #8E8E9F;
+    margin-bottom: 20px;
+}
+
+.btn-view-order {
+    display: block;
+    width: 100%; 
+    text-align: center;
+    background: #F2F4FF; 
+    color: #5D38DB;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.btn-view-order:hover {
+    background: #E5E9FF;
+}
+
+/* ======================================================= */
+/* ۶. بخش چهارم: برندهای پذیرفته شده (پس‌زمینه آبی ملایم) */
+/* ======================================================= */
+.accepted-brands {
+    width: 100%;
+    background-color: #EEF2FF;
+    padding: 60px 8%;
+}
+
+.brands-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.brands-container h2 {
+    font-size: 26px;
+    color: #1E1F4B;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.brands-subtitle {
+    font-size: 14px;
+    color: #7E7E7E;
+    margin-bottom: 40px;
+}
+
+.brands-scroll-wrapper {
+    width: 100%;
+}
+
+.brands-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand-card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(165, 175, 220, 0.04);
+}
+
+.brand-logo-wrapper {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.brand-card h3 {
+    font-size: 16px;
+    color: #1E1F4B;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.brand-card p {
+    font-size: 12px;
+    color: #8E8E9F;
+    white-space: nowrap;
+}
+
+/* ======================================================= */
+/* ۷. بخش پنجم: چرا هدیه پلاس؟ (چیدمان ۲ در ۲ دسکتاپ) */
+/* ======================================================= */
+.why-us {
+    width: 100%;
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+.why-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.why-us-container h2 {
+    font-size: 26px;
+    color: #1E1F4B;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.why-us-subtitle {
+    font-size: 14px;
+    color: #7E7E7E;
+    margin-bottom: 60px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    gap: 20px;
+}
+
+.feature-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-orange { background-color: #FFF3E0; }
+.icon-blue   { background-color: #E8EAF6; }
+.icon-pink   { background-color: #FCE4EC; }
+.icon-green  { background-color: #E8F5E9; }
+
+.feature-text h3 {
+    font-size: 18px;
+    color: #1E1F4B;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.feature-text p {
+    font-size: 14px;
+    color: #7E7E7E;
+    line-height: 1.6;
+}
+
+/* ======================================================= */
+/* ۸. بخش ششم: سوالات متداول (FAQ Accordion - رفع مشکل شروع باز) */
+/* ======================================================= */
+.faq-section {
+    width: 100%;
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-container h2 {
+    font-size: 26px;
+    color: #1E1F4B;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.accordion-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* در حالت پیش‌فرض همه آیتم‌ها بدون سایه و با استایل بسته هستند */
+.accordion-item {
+    background: #ffffff;
+    border: 1px solid #EEF0F8;
+    border-radius: 16px;
+    padding: 20px 24px;
+    transition: all 0.3s ease;
+}
+
+/* استایل فعال شدن باکس پس از کلیک کاربر */
+.accordion-item.active {
+    border-color: #5D38DB;
+    box-shadow: 0 10px 30px rgba(93, 56, 219, 0.04);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-title {
+    font-size: 16px;
+    color: #1E1F4B;
+    font-weight: 700;
+    text-align: right;
+}
+
+.faq-icon {
+    font-size: 22px;
+    color: #5D38DB;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* محتوا پیش‌فرض کاملاً مخفی و انیمیشنی است */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), margin-top 0.3s ease;
+}
+
+/* تغییرات ارتفاع و پدینگ پس از زدن دکمه پلاس */
+.accordion-item.active .accordion-content {
+    max-height: 300px; 
+    margin-top: 14px;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+}
+
+.accordion-content p {
+    font-size: 14px;
+    color: #7E7E7E;
+    line-height: 1.8;
+    text-align: right;
+}
+
+/* نوار سرمه‌ای/بنفش انتهای وب‌سایت */
+.main-footer {
+    width: 100%;
+    height: 12px;
+    background-color: #5D38DB;
+}
+
+/* ======================================================= */
+/* ۹. مدیا کوئری جامع و ریسپانسیو فوق‌العاده دقیق موبایل */
+/* ======================================================= */
+@media (max-width: 768px) {
+    .nav-menu { display: none; }
+    .main-header { padding: 16px 20px; }
+    
+    /* ریسپانسیو بخش هیرو */
+    .hero-section { padding: 10px 20px 40px 20px; }
+    .hero-container { flex-direction: column; text-align: center; gap: 32px; }
+    .hero-content h1 { font-size: 30px; font-weight: 800; }
+    .hero-actions { display: flex; flex-direction: row; width: 100%; gap: 12px; }
+    .btn-primary, .btn-secondary { flex: 1; padding: 14px 10px; font-size: 14px; border-radius: 12px; text-align: center; }
+    .hero-images { width: 100%; order: 2; }
+
+    /* ریسپانسیو بخش چطوری کار میکنه */
+    .how-it-works { padding: 50px 20px 30px 20px; }
+    .section-title-wrapper h2 { font-size: 24px; }
+    .steps-container { display: flex; flex-direction: column; gap: 16px; }
+    .step-card { padding: 20px; border-radius: 20px; }
+    .step-icon-wrapper { width: 48px; height: 48px; margin-left: 16px; }
+    .step-text { text-align: right; }
+    .step-text h3 { font-size: 16px; margin-bottom: 4px; }
+    .step-text p { font-size: 12px; }
+
+    /* ریسپانسیو بخش طرح‌های اختصاصی */
+    .special-designs { padding: 40px 20px; }
+    .products-title-line::before,
+    .products-title-line::after { display: none; } 
+    .products-header { justify-content: space-between; }
+    .products-title-line { gap: 10px; }
+    .products-title-line h2 { font-size: 20px; }
+    .view-more-link { font-size: 13px; }
+    .products-grid { flex-direction: column; gap: 40px; }
+    .product-item { width: 100%; }
+
+    /* ریسپانسیو بخش برندها (اسکرول افقی بومی) */
+    .accepted-brands { padding: 40px 0; }
+    .brands-container h2 { font-size: 22px; padding: 0 20px; }
+    .brands-subtitle { font-size: 13px; padding: 0 20px; margin-bottom: 24px; }
+    
+    .brands-scroll-wrapper {
+        overflow-x: auto;
+        padding: 10px 20px 20px 20px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        display: block;
+    }
+    .brands-scroll-wrapper::-webkit-scrollbar { display: none; } 
+    .brands-grid { display: inline-flex; justify-content: flex-start; gap: 16px; width: max-content; }
+    .brand-card { width: 140px; flex-shrink: 0; scroll-snap-align: start; padding: 20px 12px; }
+    .brand-logo-wrapper { width: 42px; height: 42px; margin-bottom: 12px; }
+    .brand-card h3 { font-size: 14px; }
+    .brand-card p { font-size: 11px; }
+
+    /* ریسپانسیو بخش چرا هدیه پلاس؟ (حفظ ردیف‌های ۲ تایی) */
+    .why-us { padding: 50px 20px; }
+    .why-us-container h2 { font-size: 22px; }
+    .why-us-subtitle { margin-bottom: 40px; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
+    .feature-item { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+    .feature-icon { width: 48px; height: 48px; }
+    .feature-icon img { width: 20px; height: 20px; }
+    .feature-text h3 { font-size: 15px; margin-bottom: 4px; }
+    .feature-text p { font-size: 12px; line-height: 1.5; }
+
+    /* ریسپانسیو بخش سوالات متداول */
+    .faq-section { padding: 50px 20px; }
+    .faq-container h2 { font-size: 22px; margin-bottom: 32px; }
+    .accordion-item { padding: 16px; border-radius: 14px; }
+    .faq-title { font-size: 14px; line-height: 1.5; padding-left: 10px; }
+    .faq-icon { font-size: 18px; }
+    .accordion-content p { font-size: 13px; line-height: 1.7; }
+}
