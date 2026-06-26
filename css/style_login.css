@@ -1,0 +1,399 @@
+/* بارگذاری فونت استاندارد از CDN */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+}
+
+body {
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* اجبار سیستم به نمایش تمام اعداد به گلیف فارسی فونت وزیر */
+body,
+input,
+input::placeholder,
+.otp-field,
+span,
+div,
+p {
+    font-variant-numeric: historical-forms !important;
+    -moz-font-feature-settings: "ss03" !important;
+    -webkit-font-feature-settings: "ss03" !important;
+    font-feature-settings: "ss03" !important;
+}
+
+/* کانتینر اصلی دسکتاپ بر پایه چینش معکوس */
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 85vh;
+    padding: 20px;
+    direction: rtl;
+}
+
+/* بخش بنر گرافیکی در سمت چپ دسکتاپ قرار گرفت */
+.graphics-section {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.banner-image-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.08));
+}
+
+/* بخش فرم ورود در سمت راست دسکتاپ */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 16px;
+
+    /* قفل کردن ابعاد فیزیکی فرم */
+    width: 450px;
+    /* عرض کاملاً ثابت در دسکتاپ */
+    min-height: 580px;
+    /* ارتفاع ثابت برای جلوگیری از کوچک شدن فرم در مرحله کد تایید */
+
+    padding: 45px 35px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+
+    /* مدیریت چینش عمودی برای یکدست ماندن فضا */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* شروع از بالا، اما با ارتفاع ثابت */
+    align-items: center;
+}
+
+/* مدیریت نمایش پویای مراحل فرم بدون تاثیر روی ابعاد باکس اصلی */
+.step-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    /* فرزند کل ارتفاع در دسترس را پر کند */
+    animation: fadeInStep 0.35s ease-out;
+}
+
+.step-content.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* توزیع یکنواخت المان‌های داخلی هر مرحله */
+}
+
+@keyframes fadeInStep {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ساختار المان‌های داخلی فرم */
+.logo-container {
+    margin-bottom: 25px;
+}
+
+.logo-mock {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-mock img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 14px;
+    font-weight: 700;
+    /* کاملاً بولد و تیره مطابق طرح */
+    color: #242424;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.sub-title-thin {
+    font-weight: 400;
+    color: #6B7280;
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+.info-text {
+    font-size: 13px;
+    font-weight: 400;
+    color: #242424;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.info-text span {
+    font-weight: 700;
+}
+
+.btn-change-phone {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #9CA3AF;
+    text-decoration: underline;
+    font-size: 11px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+form {
+    width: 100%;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 12px;
+    color: #6B7280;
+    margin-bottom: 8px;
+    padding-right: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #1F2937;
+    background-color: #FAFAFA;
+    outline: none;
+    text-align: right;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: #4F46E5;
+    background-color: #FFF;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* فیلدهای اختصاصی ۵ رقمی OTP کاملاً مشابه تصویر */
+.otp-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.otp-field {
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    background-color: #FAFAFA;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.otp-field:focus {
+    border-color: #4F46E5;
+    background-color: #FFF;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.otp-timer-zone {
+    text-align: center;
+    font-size: 12px;
+    color: #1F2937;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.timer-countdown {
+    color: #242424;
+    font-weight: 700;
+}
+
+.btn-resend-code {
+    background: none;
+    border: none;
+    color: #4F46E5;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.terms-text {
+    font-size: 10px;
+    color: #4B5563;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* استایل دکمه‌ها */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #5146e5;
+    color: #FFFFFF;
+    border: none;
+    margin-bottom: 12px;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+}
+
+.btn-submit-profile {
+    margin-top: 15px;
+}
+
+.btn-google {
+    background-color: #FFFFFF;
+    color: #4B5563;
+    border: 1px solid #9CA3AF;
+}
+
+.btn-google:hover {
+    background-color: #F9FAFB;
+    border-color: #6B7280;
+}
+
+.google-icon {
+    flex-shrink: 0;
+}
+
+/* استایل نمایش پیام‌های خطای فارسی */
+.error-message {
+    color: #DC2626;
+    /* قرمز استاندارد خطا */
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 6px;
+    min-height: 18px;
+    /* جلوگیری از پرش المان‌ها */
+    text-align: right;
+    transition: all 0.2s ease;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/* قرمز شدن حاشیه فیلدها هنگام بروز خطا */
+.input-field-error {
+    border-color: #DC2626 !important;
+    background-color: #FEF2F2 !important;
+}
+
+/* ==========================================================================
+   بخش ریسپانسیو موبایل
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        background-color: #FFFFFF;
+        align-items: flex-start;
+    }
+
+    .login-container {
+        height: auto;
+        padding: 0;
+    }
+
+    .graphics-section {
+        display: none;
+    }
+
+    .form-section {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .login-box {
+        width: 100%;
+        /* در موبایل عرض به اندازه صفحه باز شود */
+        min-height: auto;
+        /* در موبایل نیازی به قفل ارتفاع نیست تا اسکرول نخورد */
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .terms-text {
+        margin: 32px;
+        font-weight: 500;
+        color: #242424;
+    }
+}
